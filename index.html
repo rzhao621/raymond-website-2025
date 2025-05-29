@@ -3,35 +3,72 @@
 <head>
   <meta charset="UTF-8">
   <title>Website Under Makeover</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <style>
     body {
-      background-color: #f9f9f9;
-      color: #333;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #1e1e1e;
+      color: #f0f0f0;
+      font-family: 'Press Start 2P', cursive;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       height: 100vh;
       margin: 0;
+      overflow: hidden;
       text-align: center;
+      position: relative;
     }
 
     h1 {
-      font-size: 2.5rem;
+      font-size: 1.5rem;
       margin-bottom: 20px;
     }
 
     p {
-      font-size: 1.2rem;
+      font-size: 0.9rem;
     }
 
     .emoji {
       font-size: 3rem;
     }
+
+    .animals {
+      position: absolute;
+      top: 10%;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      pointer-events: none;
+    }
+
+    .animal {
+      width: 64px;
+      height: 64px;
+      animation: moveAround 6s infinite alternate ease-in-out;
+    }
+
+    .animal:nth-child(2) {
+      animation-delay: 2s;
+    }
+
+    .animal:nth-child(3) {
+      animation-delay: 4s;
+    }
+
+    @keyframes moveAround {
+      0% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-10px) rotate(5deg); }
+      100% { transform: translateY(0) rotate(-5deg); }
+    }
   </style>
 </head>
 <body>
+  <div class="animals">
+    <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Dino" class="animal" title="Working Dino" />
+    <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Panda" class="animal" title="Building Panda" />
+    <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Dog" class="animal" title="Cute Builder Dog" />
+  </div>
   <div class="emoji">🚧</div>
   <h1>Oops! My website is getting a makeover 😄</h1>
   <p>Please check back soon for a completely new layout and experience.</p>
