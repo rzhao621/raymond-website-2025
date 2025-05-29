@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Website Under Makeover</title>
+  <title>Website Under Construction</title>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <style>
     body {
@@ -29,3 +29,43 @@
     }
 
     .emoji {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .runner {
+      position: absolute;
+      bottom: 50px;
+      width: 80px;
+      animation: moveAcross 10s linear infinite;
+    }
+
+    .runner:nth-child(2) {
+      animation-delay: 5s;
+    }
+
+    @keyframes moveAcross {
+      0% {
+        left: -100px;
+        transform: scaleX(1);
+      }
+      50% {
+        transform: scaleX(1);
+      }
+      100% {
+        left: 110%;
+        transform: scaleX(1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Dino with box" class="runner" title="Dino carrying box" />
+  <img src="https://cdn-icons-png.flaticon.com/512/616/616430.png" alt="Construction Panda" class="runner" title="Panda with hard hat" />
+
+  <div class="emoji">🚧</div>
+  <h1>Oops! My website is getting a makeover.</h1>
+  <p>Please check back soon for a completely new layout and experience!</p>
+  <p>– Raymond Zhao :D</p>
+</body>
+</html>
